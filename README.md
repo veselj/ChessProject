@@ -13,9 +13,9 @@ Some of the things we thing are important:
 
 
 STEPS
-1. Branch/fork from the master - (or we will branch/fork for you?) 
-2. Choose which language you are most comfortable completing this in - at the moment you have a choice of PHP, Java, C# 
-3. Read the documentation for the project and follow the instructions
-4. Any questions get in touch - (Wiki? Pull request?)
+-1. Branch/fork from the master - (or we will branch/fork for you?) 
+-2. Choose which language you are most comfortable completing this in - at the moment you have a choice of PHP, Java, C# 
+-3. Read the documentation for the project and follow the instructions
+-4. Any questions get in touch - (Wiki? Pull request?)
 
 When you are complete please email jonathan DOT Baird AT Logicnow.com
