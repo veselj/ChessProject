@@ -23,4 +23,7 @@ STEPS
     * Public - notify [@LogicNow-Jonny](https://github.com/LogicNow-Jonny)  
     * Private - zip up your repo and email (or upload to your Cloud Storage product of choice and email link) to [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com?subject=Developer ChessProject Completed)
 
-Any questions get in touch
+
+Timescales - as a rough guide please aim to get this back to us within 1 week of starting the project, but we do understand that life gets in the way sometimes!
+
+Any questions please get in touch
