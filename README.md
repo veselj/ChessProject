@@ -13,9 +13,13 @@ Some of the things we thing are important:
 
 
 STEPS  
-1. Branch/fork from the master - (or we will branch/fork for you?)  
+1. Fork your own copy of this Repo by either:   * Public - Fork a copy into your own public github account * Private - Fork a copy onto your local machine (Download the repo)  
 2. Choose which language you are most comfortable completing this in - at the moment you have a choice of PHP, Java, C#  
 3. Read the documentation for the project and follow the instructions  
-4. Any questions get in touch - (Wiki? Pull request?)  
+4. Commit updated code to your repo for the project (please maintain an offline repo if doing this privately)  
+5. Once complete
+  * Public - notify [@LogicNow-Jonny](https://github.com/LogicNow-Jonny)  
+  * Private - zip up your repo and email (or upload to your Cloud Storage product of choice and email link) to [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com)
+  
 
-When you are complete please email jonathan DOT Baird AT Logicnow.com
+Any questions get in touch
