@@ -12,7 +12,7 @@ Some of the things we thing are important:
 * Refactoring
 
 
-STEPS  
+__STEPS__  
 1. Fork your own copy of this Repo by either:   
     * Public - Fork a copy into your own public github account   
     * Private - Fork a copy onto your local machine (Download the repo)   
@@ -26,4 +26,4 @@ STEPS
 
 Timescales - as a rough guide please aim to get this back to us within 1 week of starting the project, but we do understand that life gets in the way sometimes!
 
-Any questions please get in touch
+__Any questions please get in touch__
