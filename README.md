@@ -26,4 +26,4 @@ __STEPS__
 
 Timescales - as a rough guide please aim to get this back to us within 1 week of starting the project, but we do understand that life gets in the way sometimes!
 
-__Any questions please get in touch__
+__Any questions please get in touch with Jonny in the recruitment team - [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com?subject=Developer ChessProject)__
