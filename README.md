@@ -20,7 +20,7 @@ __STEPS__
 3. Read the documentation for the project and follow the instructions  
 4. Commit updated code to your repo for the project (please maintain an offline repo if doing this privately)  
 5. Once complete  
-    * Public - notify [@LogicNow-Jonny](https://github.com/LogicNow-Jonny) - add this user with read access to the repo.  
+    * Public - Email link to your repo to [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com?subject=Developer ChessProject Completed)
     * Private - zip up your repo and email (or upload to your Cloud Storage product of choice and email link) to [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com?subject=Developer ChessProject Completed)
 
 
