@@ -21,7 +21,7 @@ __STEPS__
 4. Commit updated code to your repo for the project (please maintain an offline repo if doing this privately)  
 5. Once complete  
     * Public - Email link to your repo to [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com?subject=Developer ChessProject Completed)  
-    * Private - zip up your repo and email (or upload to your Cloud Storage product of choice and email link) to [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com?subject=Developer ChessProject Completed)
+    * Private - zip up your repo (or upload to your Cloud Storage service of choice) and submit at the link given in the initial email, or email to [jonathan.baird@logicnow.com](mailto:jonathan.baird@logicnow.com?subject=Developer ChessProject Completed)
 
 
 Timescales - as a rough guide please aim to get this back to us within 1 week of starting the project, but we do understand that life gets in the way sometimes!
