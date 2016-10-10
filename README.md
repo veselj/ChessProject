@@ -21,9 +21,9 @@ __STEPS__
 4. Commit updated code to your repo for the project (please maintain an offline repo if doing this privately)  
 5. Once complete  
     * Public - Email link to your repo to [grant.meldrum@logicnow.com](mailto:grant.meldrum@logicnow.com?subject=Developer ChessProject Completed)  
-    * Private - zip up your repo (or upload to your Cloud Storage service of choice) and submit at the link given in the initial email, or email to [grant.meldrum@logicnow.com](mailto:grant.meldrum@logicnow.com?subject=Developer ChessProject Completed)
+    * Private - zip up your repo (or upload to your Cloud Storage service of choice) and submit at the link given in the initial email, or email to [grant.meldrum@solarwinds.com](mailto:grant.meldrum@solarwinds.com?subject=Developer ChessProject Completed)
 
 
 Timescales - as a rough guide please aim to get this back to us within 1 week of starting the project, but we do understand that life gets in the way sometimes!
 
-__Any questions please get in touch with Grant in the recruitment team - [grant.meldrum@logicnow.com](mailto:grant.meldrum@logicnow.com?subject=Developer ChessProject)__
+__Any questions please get in touch with Grant in the recruitment team - [grant.meldrum@solarwinds.com](mailto:grant.meldrum@solarwinds.com?subject=Developer ChessProject)__
