@@ -1,4 +1,4 @@
-package com.logicnow.hiring;
+package com.solarwindsmsp.chess;
 
 public enum PieceColor {
 

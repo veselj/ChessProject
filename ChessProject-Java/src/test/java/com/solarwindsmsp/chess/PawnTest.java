@@ -1,4 +1,4 @@
-package com.logicnow.hiring;
+package com.solarwindsmsp.chess;
 
 import junit.framework.Assert;
 import org.junit.Before;

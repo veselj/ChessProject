@@ -1,8 +1,4 @@
-package com.logicnow.hiring;
-
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
-import java.util.ArrayList;
+package com.solarwindsmsp.chess;
 
 public class ChessBoard {
 
