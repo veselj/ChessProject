@@ -1,6 +1,6 @@
 <?php
 
-namespace LogicNow;
+namespace SolarWinds\Chess;
 
 class PieceColorEnum
 {

@@ -1,85 +1,79 @@
 <?php
 
-namespace LogicNow;
+namespace SolarWinds\Chess;
 
 
 class Pawn
 {
-
     /** @var PieceColorEnum */
-    private $_pieceColorEnum;
-    /** @var  ChessBoard */
-    private $_chessBoard;
-    /** @var  int */
-    private $_xCoordinate;
-    /** @var  int */
-    private $_yCoordinate;
+    private $pieceColorEnum;
+
+    /** @var ChessBoard */
+    private $chessBoard;
+
+    /** @var int */
+    private $xCoordinate;
+
+    /** @var int */
+    private $yCoordinate;
 
     public function __construct(PieceColorEnum $pieceColorEnum)
     {
-        $this->_pieceColorEnum = $pieceColorEnum;
+        $this->pieceColorEnum = $pieceColorEnum;
     }
 
     public function getChesssBoard()
     {
-        return $this->_chessBoard;
+        return $this->chessBoard;
     }
 
     public function setChessBoard(ChessBoard $chessBoard)
     {
-        $this->_chessBoard = $chessBoard;
+        $this->chessBoard = $chessBoard;
     }
 
     /** @return int */
     public function getXCoordinate()
     {
-        return $this->_xCoordinate;
+        return $this->xCoordinate;
     }
 
     /** @var int */
     public function setXCoordinate($value)
     {
-        $this->_xCoordinate = $value;
+        $this->xCoordinate = $value;
     }
 
     /** @return int */
     public function getYCoordinate()
     {
-        return $this->_yCoordinate;
+        return $this->yCoordinate;
     }
 
     /** @var int */
     public function setYCoordinate($value)
     {
-        $this->_yCoordinate = $value;
+        $this->yCoordinate = $value;
     }
 
     public function getPieceColor()
     {
-        return $this->_pieceColorEnum;
+        return $this->pieceColorEnum;
     }
 
     public function setPieceColor(PieceColorEnum $value)
     {
-        $this->_pieceColorEnum = $value;
+        $this->pieceColorEnum = $value;
     }
 
     public function move(MovementTypeEnum $movementTypeEnum, $newX, $newY)
     {
-        throw new \Exception("Need to implement Pawn.Move()");
+        throw new \Exception("Need to implement " . __METHOD__);
     }
 
     public function toString()
     {
-        return $this->currentPositionAsString();
+		return "x({$this->xCoordinate}), y({$this->yCoordinate}), pieceColor({$this->pieceColorEnum})";
     }
-
-    protected function currentPositionAsString()
-    {
-        $result = "Current X: " . $this->_xCoordinate . PHP_EOL;
-        $result .= "Current Y: " . $this->_yCoordinate . PHP_EOL;
-        $result .= "Piece Color: " . $this->_pieceColorEnum;
-        return $result;
-    }
-
 }
+

@@ -1,11 +1,10 @@
 <?php
 
-namespace LogicNow\Test;
+namespace SolarWinds\Chess;
 
-
-use LogicNow\ChessBoard;
-use LogicNow\PieceColorEnum;
-use LogicNow\Pawn;
+use SolarWinds\Chess\ChessBoard;
+use SolarWinds\Chess\PieceColorEnum;
+use SolarWinds\Chess\Pawn;
 
 class ChessBoardTest extends \PHPUnit_Framework_TestCase
 {
