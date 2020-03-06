@@ -7,8 +7,7 @@ use SolarWinds\Chess\MovementTypeEnum;
 use SolarWinds\Chess\Pawn;
 use SolarWinds\Chess\PieceColorEnum;
 
-
-class PawnTest extends \PHPUnit_Framework_TestCase
+class PawnTest extends \PHPUnit\Framework\TestCase
 {
 
     /** @var  ChessBoard */
@@ -16,7 +15,7 @@ class PawnTest extends \PHPUnit_Framework_TestCase
     /** @var  Pawn */
     private $_testSubject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->_chessBoard = new ChessBoard();
         $this->_testSubject = new Pawn(PieceColorEnum::WHITE());

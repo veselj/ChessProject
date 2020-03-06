@@ -6,13 +6,13 @@ use SolarWinds\Chess\ChessBoard;
 use SolarWinds\Chess\PieceColorEnum;
 use SolarWinds\Chess\Pawn;
 
-class ChessBoardTest extends \PHPUnit_Framework_TestCase
+class ChessBoardTest extends \PHPUnit\Framework\TestCase
 {
 
     /** @var  ChessBoard */
     private $_testSubject;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->_testSubject = new ChessBoard();
     }
