@@ -9,14 +9,13 @@ public class ChessBoard {
 
     public ChessBoard() {
         pieces = new Pawn[MAX_BOARD_WIDTH][MAX_BOARD_HEIGHT];
-
     }
 
-    public void Add(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor) {
+    public void addPiece(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor) {
         throw new UnsupportedOperationException("Need to implement ChessBoard.add()");
     }
 
-    public boolean IsLegalBoardPosition(int xCoordinate, int yCoordinate) {
+    public boolean isLegalBoardPosition(int xCoordinate, int yCoordinate) {
         throw new UnsupportedOperationException("Need to implement ChessBoard.IsLegalBoardPosition()");
     }
 }

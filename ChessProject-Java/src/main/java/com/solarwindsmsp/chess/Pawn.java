@@ -11,7 +11,7 @@ public class Pawn {
         this.pieceColor = pieceColor;
     }
 
-    public ChessBoard getChesssBoard() {
+    public ChessBoard getChessBoard() {
         return chessBoard;
     }
 
@@ -43,16 +43,16 @@ public class Pawn {
         pieceColor = value;
     }
 
-    public void Move(MovementType movementType, int newX, int newY) {
+    public void move(MovementType movementType, int newX, int newY) {
         throw new UnsupportedOperationException("Need to implement Pawn.Move()") ;
     }
 
     @Override
     public String toString() {
-        return CurrentPositionAsString();
+        return getCurrentPositionAsString();
     }
 
-    protected String CurrentPositionAsString() {
+    protected String getCurrentPositionAsString() {
         String eol = System.lineSeparator();
         return String.format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", eol, xCoordinate, yCoordinate, pieceColor);
     }
