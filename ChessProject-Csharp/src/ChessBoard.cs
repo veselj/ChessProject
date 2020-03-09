@@ -22,6 +22,5 @@ namespace SolarWinds.MSP.Chess
         {
             throw new NotImplementedException("Need to implement ChessBoard.IsLegalBoardPosition()");
         }
-
     }
 }
