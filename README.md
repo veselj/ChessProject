@@ -14,7 +14,7 @@ Some of the things we think are important:
 __STEPS__  
 1. Fork the repository into your own github account   
 2. Choose which language you are most comfortable completing this in - you have a choice of PHP, Java, C#  
-3. Read the documentation for the project and follow the instructions  
+3. Read and follow the [instructions](INSTRUCTIONS.md) for the project
 4. Commit updated code to your repo for the project
 5. Create a pull request with your changes against our master branch
 6. Email [grant.meldrum@solarwinds.com](mailto:grant.meldrum@solarwinds.com?subject=Developer ChessProject Completed) and let him know you have created the pull request 
