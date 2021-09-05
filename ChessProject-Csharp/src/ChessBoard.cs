@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SolarWinds.MSP.Chess
+﻿namespace SolarWinds.MSP.Chess
 {
     public class ChessBoard
     {
@@ -10,15 +8,14 @@ namespace SolarWinds.MSP.Chess
         private Piece[,] pieces;
         private int pawns;
 
-        public ChessBoard ()
+        public ChessBoard()
         {
             pieces = new Piece[MaxBoardWidth + 1, MaxBoardHeight + 1];
         }
 
-        public void Add(Piece piece, int xCoordinate, int yCoordinate, PieceColor pieceColor)
+        public void Add(Piece piece, int xCoordinate, int yCoordinate)
         {
             if (IsLegalBoardPosition(xCoordinate, yCoordinate) &&
-                pieceColor == piece.PieceColor && // TODO - not clean, why is the parameter passed in?
                 pieces[xCoordinate, yCoordinate] == null &&
                 PieceAllowed(piece))
             {
@@ -30,7 +27,7 @@ namespace SolarWinds.MSP.Chess
             }
         }
 
-        public bool IsLegalBoardPosition(int xCoordinate, int yCoordinate)
+        public static bool IsLegalBoardPosition(int xCoordinate, int yCoordinate)
         {
             return xCoordinate >= 0 && xCoordinate <= MaxBoardWidth &&
                    yCoordinate >= 0 && yCoordinate <= MaxBoardHeight;
@@ -38,10 +35,14 @@ namespace SolarWinds.MSP.Chess
 
         public void Remove(int xCoordinate, int yCoordinate)
         {
-            if (pieces[xCoordinate, yCoordinate] != null)
+            Piece p = GetPiece(xCoordinate, yCoordinate);
+            if (p != null)
             {
+                // TODO: generalise once more pieces are implemented
                 pawns--;
                 pieces[xCoordinate, yCoordinate] = null;
+                p.XCoordinate = -1;
+                p.YCoordinate = -1;
             }
         }
 
@@ -53,6 +54,7 @@ namespace SolarWinds.MSP.Chess
         private bool PieceAllowed(Piece piece)
         {
             // TODO: need to update when more pieces are added
+            // rules will likely need to be externalised from ChessBoard.
             return pawns < MaxPawns;
         }
     }

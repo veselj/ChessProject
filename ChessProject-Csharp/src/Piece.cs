@@ -2,7 +2,9 @@
 
 namespace SolarWinds.MSP.Chess
 {
-    // Piece represents common behavious of all chess pieces
+    /// <summary>
+    /// Piece represents common behavious of all chess pieces
+    /// </summary>
     abstract public class Piece
     {
         public Piece(PieceColor pieceColor)
@@ -18,7 +20,23 @@ namespace SolarWinds.MSP.Chess
 
         public PieceColor PieceColor { get; set; }
 
-        abstract public void Move(MovementType movementType, int newX, int newY);
+        /// <summary>
+        /// Move returns true if the move was successful,
+        /// otherwise the piece remains where it was.
+        /// </summary>
+        /// <param name="movementType"></param>
+        /// <param name="newX"></param>
+        /// <param name="newY"></param>
+        /// <returns></returns>
+        abstract public bool Move(MovementType movementType, int newX, int newY);
+
+        public void Remove()
+        {
+            if (ChessBoard != null)
+            {
+
+            }
+        }
 
         public override string ToString()
         {

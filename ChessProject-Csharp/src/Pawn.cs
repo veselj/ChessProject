@@ -1,19 +1,17 @@
-﻿using System;
-
-namespace SolarWinds.MSP.Chess
+﻿namespace SolarWinds.MSP.Chess
 {
-    public class Pawn: Piece
+    public class Pawn : Piece
     {
-
         public Pawn(PieceColor pieceColor)
             : base(pieceColor)
         { }
 
-        public override void Move(MovementType movementType, int newX, int newY)
+        public override bool Move(MovementType movementType, int newX, int newY)
         {
+            bool retVal = false;
             if (ChessBoard == null || !ChessBoard.IsLegalBoardPosition(newX, newY))
             {
-                return;
+                return retVal;
             }
             int dx = newX - XCoordinate;
             int dy = PieceColor == PieceColor.White ?
@@ -25,6 +23,7 @@ namespace SolarWinds.MSP.Chess
                     {
                         XCoordinate = newX;
                         YCoordinate = newY;
+                        retVal = true;
                     }
                     break;
                 case MovementType.Capture:
@@ -35,12 +34,15 @@ namespace SolarWinds.MSP.Chess
                         if ((dx == 1 || dx == -1) && dy == 1 &&
                              PieceColor == otherColor.Invert())
                         {
+                            ChessBoard.Remove(newX, newY);
                             XCoordinate = newX;
                             YCoordinate = newY;
+                            retVal = true;
                         }
                     }
                     break;
             }
+            return retVal;
         }
 
     }
