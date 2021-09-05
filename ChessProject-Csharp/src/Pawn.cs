@@ -2,85 +2,45 @@
 
 namespace SolarWinds.MSP.Chess
 {
-    public class Pawn
+    public class Pawn: Piece
     {
-        private ChessBoard chessBoard;
-        private int xCoordinate = -1;
-        private int yCoordinate = -1;
-        private PieceColor pieceColor;
-        
-        public ChessBoard ChessBoard
-        {
-            get { return chessBoard; }
-            set { chessBoard = value; }
-        }
-
-        public int XCoordinate
-        {
-            get { return xCoordinate; }
-            set { xCoordinate = value; }
-        }
-        
-        public int YCoordinate
-        {
-            get { return yCoordinate; }
-            set { yCoordinate = value; }
-        }
-
-        public PieceColor PieceColor
-        {
-            get { return pieceColor; }
-            private set { pieceColor = value; }
-        }
 
         public Pawn(PieceColor pieceColor)
-        {
-            this.pieceColor = pieceColor;
-        }
+            : base(pieceColor)
+        { }
 
-        public void Move(MovementType movementType, int newX, int newY)
+        public override void Move(MovementType movementType, int newX, int newY)
         {
-            if (chessBoard == null || !chessBoard.IsLegalBoardPosition(newX, newY))
+            if (ChessBoard == null || !ChessBoard.IsLegalBoardPosition(newX, newY))
             {
                 return;
             }
-            int dx = newX - xCoordinate;
-            int dy = pieceColor == PieceColor.White ?
-                       newY - yCoordinate : yCoordinate - newY;
+            int dx = newX - XCoordinate;
+            int dy = PieceColor == PieceColor.White ?
+                       newY - YCoordinate : YCoordinate - newY;
             switch (movementType)
             {
                 case MovementType.Move:
-                    if (dx == 0 && dy == 1 && null == chessBoard.GetPawn(newX, newY))
+                    if (dx == 0 && dy == 1 && null == ChessBoard.GetPiece(newX, newY))
                     {
-                        xCoordinate = newX;
-                        yCoordinate = newY;
+                        XCoordinate = newX;
+                        YCoordinate = newY;
                     }
                     break;
                 case MovementType.Capture:
-                    Pawn p = chessBoard.GetPawn(newX, newY);
+                    Piece p = ChessBoard.GetPiece(newX, newY);
                     if (p != null)
                     {
-                        PieceColor c = p.PieceColor;
+                        PieceColor otherColor = p.PieceColor;
                         if ((dx == 1 || dx == -1) && dy == 1 &&
-                             PieceColor == c.Invert())
+                             PieceColor == otherColor.Invert())
                         {
-                            xCoordinate = newX;
-                            yCoordinate = newY;
+                            XCoordinate = newX;
+                            YCoordinate = newY;
                         }
                     }
                     break;
             }
-        }
-
-        public override string ToString()
-        {
-            return CurrentPositionAsString();
-        }
-
-        protected string CurrentPositionAsString()
-        {
-            string nl = Environment.NewLine;
-            return $"Current X: {XCoordinate}{nl}Current Y: {YCoordinate}{nl}Piece Color: {PieceColor}";
         }
 
     }

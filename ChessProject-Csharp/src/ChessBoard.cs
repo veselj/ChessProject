@@ -7,26 +7,26 @@ namespace SolarWinds.MSP.Chess
         public static readonly int MaxBoardWidth = 7; // chessboard width 0..7 inclusive
         public static readonly int MaxBoardHeight = 7; // chessboard height 0..7 inclusive
         public static readonly int MaxPawns = MaxBoardWidth + 1;// chess game rule
-        private Pawn[,] pieces;
+        private Piece[,] pieces;
         private int pawns;
 
         public ChessBoard ()
         {
-            pieces = new Pawn[MaxBoardWidth + 1, MaxBoardHeight + 1];
+            pieces = new Piece[MaxBoardWidth + 1, MaxBoardHeight + 1];
         }
 
-        public void Add(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor)
+        public void Add(Piece piece, int xCoordinate, int yCoordinate, PieceColor pieceColor)
         {
             if (IsLegalBoardPosition(xCoordinate, yCoordinate) &&
-                pieceColor == pawn.PieceColor && // TODO - not clean, why is the parameter passed in?
+                pieceColor == piece.PieceColor && // TODO - not clean, why is the parameter passed in?
                 pieces[xCoordinate, yCoordinate] == null &&
-                PieceAllowed(pawn))
+                PieceAllowed(piece))
             {
-                pieces[xCoordinate, yCoordinate] = pawn;
+                pieces[xCoordinate, yCoordinate] = piece;
                 pawns++;
-                pawn.ChessBoard = this;
-                pawn.XCoordinate = xCoordinate;
-                pawn.YCoordinate = yCoordinate;
+                piece.ChessBoard = this;
+                piece.XCoordinate = xCoordinate;
+                piece.YCoordinate = yCoordinate;
             }
         }
 
@@ -45,13 +45,14 @@ namespace SolarWinds.MSP.Chess
             }
         }
 
-        public Pawn GetPawn(int xCoordinate, int yCoordinate)
+        public Piece GetPiece(int xCoordinate, int yCoordinate)
         {
             return pieces[xCoordinate, yCoordinate];
         }
 
-        private bool PieceAllowed(Pawn pawn)
+        private bool PieceAllowed(Piece piece)
         {
+            // TODO: need to update when more pieces are added
             return pawns < MaxPawns;
         }
     }
