@@ -5,8 +5,8 @@ namespace SolarWinds.MSP.Chess
     public class Pawn
     {
         private ChessBoard chessBoard;
-        private int xCoordinate;
-        private int yCoordinate;
+        private int xCoordinate = -1;
+        private int yCoordinate = -1;
         private PieceColor pieceColor;
         
         public ChessBoard ChessBoard
@@ -40,7 +40,36 @@ namespace SolarWinds.MSP.Chess
 
         public void Move(MovementType movementType, int newX, int newY)
         {
-            throw new NotImplementedException("Need to implement Pawn.Move()");
+            if (chessBoard == null || !chessBoard.IsLegalBoardPosition(newX, newY))
+            {
+                return;
+            }
+            int dx = newX - xCoordinate;
+            int dy = pieceColor == PieceColor.White ?
+                       newY - yCoordinate : yCoordinate - newY;
+            switch (movementType)
+            {
+                case MovementType.Move:
+                    if (dx == 0 && dy == 1 && null == chessBoard.GetPawn(newX, newY))
+                    {
+                        xCoordinate = newX;
+                        yCoordinate = newY;
+                    }
+                    break;
+                case MovementType.Capture:
+                    Pawn p = chessBoard.GetPawn(newX, newY);
+                    if (p != null)
+                    {
+                        PieceColor c = p.PieceColor;
+                        if ((dx == 1 || dx == -1) && dy == 1 &&
+                             PieceColor == c.Invert())
+                        {
+                            xCoordinate = newX;
+                            yCoordinate = newY;
+                        }
+                    }
+                    break;
+            }
         }
 
         public override string ToString()
@@ -50,7 +79,8 @@ namespace SolarWinds.MSP.Chess
 
         protected string CurrentPositionAsString()
         {
-            return string.Format("Current X: {1}{0}Current Y: {2}{0}Piece Color: {3}", Environment.NewLine, XCoordinate, YCoordinate, PieceColor);
+            string nl = Environment.NewLine;
+            return $"Current X: {XCoordinate}{nl}Current Y: {YCoordinate}{nl}Piece Color: {PieceColor}";
         }
 
     }
