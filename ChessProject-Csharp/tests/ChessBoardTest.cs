@@ -14,15 +14,15 @@ namespace SolarWinds.MSP.Chess
         }
 
         [Test]
-        public void Has_MaxBoardWidth_of_7()
+        public void Has_MaxBoardWidth_of_8()
         {
-            Assert.AreEqual(7, ChessBoard.MaxBoardWidth);
+            Assert.AreEqual(8, ChessBoard.MaxBoardWidth);
         }
 
         [Test]
-        public void Has_MaxBoardHeight_of_7()
+        public void Has_MaxBoardHeight_of_8()
         {
-            Assert.AreEqual(7, ChessBoard.MaxBoardHeight);
+            Assert.AreEqual(8, ChessBoard.MaxBoardHeight);
         }
 
         // Simplifying by doing boundary checks
@@ -54,6 +54,24 @@ namespace SolarWinds.MSP.Chess
         }
 
         [Test]
+        public void GetPiece_Remove_Pawn()
+        {
+            Pawn pawn = new Pawn(PieceColor.White);
+            chessBoard.Add(pawn, 4, 1);
+            Assert.AreEqual(pawn, chessBoard.GetPiece(4, 1));
+            chessBoard.Remove(4, 1);
+            Assert.AreEqual(null, chessBoard.GetPiece(4, 1));
+        }
+
+        [Test]
+        public void GetPiece_Remove_Invalid_Pawn()
+        {
+            Assert.AreEqual(null, chessBoard.GetPiece(-1, 0));
+            chessBoard.Remove(0, -1);
+            Assert.AreEqual(null, chessBoard.GetPiece(0, -1));
+        }
+
+        [Test]
         public void Limits_The_Number_Of_Pawns()
         {
             // place black pawns on the starting row and any 
@@ -61,8 +79,8 @@ namespace SolarWinds.MSP.Chess
             for (int i = 0; i < 10; i++)
             {
                 Pawn pawn = new Pawn(PieceColor.Black);
-                int column = i % (ChessBoard.MaxBoardWidth + 1);
-                int row = 6 - i / (ChessBoard.MaxBoardWidth + 1);
+                int column = i % ChessBoard.MaxBoardWidth;
+                int row = 6 - i / ChessBoard.MaxBoardWidth;
                 chessBoard.Add(pawn, column, row);
                 if (row == 6)
                 {
@@ -77,6 +95,7 @@ namespace SolarWinds.MSP.Chess
             }
         }
 
+        [Test]
         public void Limit_Updated_Removed_Pawn()
         {
             for (int i = 0; i < 8; i++)

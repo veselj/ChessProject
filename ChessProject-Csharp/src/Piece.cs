@@ -30,14 +30,6 @@ namespace SolarWinds.MSP.Chess
         /// <returns></returns>
         abstract public bool Move(MovementType movementType, int newX, int newY);
 
-        public void Remove()
-        {
-            if (ChessBoard != null)
-            {
-
-            }
-        }
-
         public override string ToString()
         {
             string nl = Environment.NewLine;

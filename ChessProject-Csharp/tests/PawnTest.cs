@@ -109,8 +109,9 @@ namespace SolarWinds.MSP.Chess
             Assert.AreEqual(-1, pawn2.YCoordinate);
         }
 
+
         [Test]
-        public void Pawn_ToString()
+        public void Piece_ToString()
         {
             Assert.AreEqual("Current X: -1\r\nCurrent Y: -1\r\nPiece Color: Black", pawn.ToString());
             chessBoard.Add(pawn, 0, 6);
